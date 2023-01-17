@@ -8,7 +8,7 @@
 
 ## Design
 
-## Data Strucgture
+## Data Structure
 
 
 
