@@ -1,0 +1,8 @@
+<h1 class="appHeading">Welcome to {{title}}</h1>
+
+<h2>Please select on art work from the following</h2>
+<ul>
+  <li *ngFor="let art of artWorks">{{art.id}} - {{art.subject}} - {{art.price}}
+    <button (click)="deleteArtWork(art.id)">Delete</button>
+  </li>
+</ul>
