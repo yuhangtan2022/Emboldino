@@ -10,6 +10,7 @@ import {ArtWork, ART_WORKS} from './domain';
 export class AppComponent implements OnInit{
   title = 'Emboldino App';
   artWorks : ArtWork[] = [];
+  showEmbark = false;
 
   constructor(private _service : AppService) {}
 
@@ -20,4 +21,8 @@ export class AppComponent implements OnInit{
   deleteArtWork(id : number) : void {
     this.artWorks = this.artWorks.filter(aw => aw.id != id);
   } 
+
+  showEmbarkPage(): void {
+    this.showEmbark = true;
+  }
 }
