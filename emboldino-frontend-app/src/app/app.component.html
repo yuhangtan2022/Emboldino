@@ -1,18 +1,15 @@
-<button>Search</button>
-<button>Embolden</button>
+
+<nav>
+  <a routerLink="/dashboard">Dashboard</a>
+  <a routerLink="/embolden">Embolden</a>
+  <a routerLink="/search">Search</a>
+</nav>
+
 <h1 class="appHeading">Welcome to {{title}}</h1>
 
-<h2>Please select on art work from the following</h2>
-<ul>
-  <li *ngFor="let art of artWorks">{{art.id}} - {{art.subject}} - {{art.price}}
-    <button (click)="deleteArtWork(art.id)">Delete</button>
-  </li>
-  <button (click)="showEmbarkPage()">Embark</button>
-</ul>
+<router-outlet></router-outlet>
 
-<div *ngIf="showEmbark">
-  <app-embark></app-embark>
-</div>
+
 
 
 

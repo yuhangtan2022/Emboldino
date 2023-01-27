@@ -1,0 +1,31 @@
+<h1>Add new Art work</h1>
+<div>
+    <div>
+        <label for="name">Subject: </label>
+        <input id="name" [(ngModel)]="artWork.subject" placeholder="Please enter the subject of the art work.">
+    </div>
+    <div>
+        <label for="description">Description: </label><br/>
+        <textarea id="description" cols="100" rows="6" [(ngModel)]="artWork.description" placeholder="Please enter the description of the art work."></textarea>
+    </div>
+    <div>
+        <label for="url">URL: </label>
+        <input id="url" [(ngModel)]="artWork.url" placeholder="Please enter the URL of the art work.">
+    </div>
+    <div>
+        <label for="style">Style: </label>
+        <input id="style" [(ngModel)]="artWork.style" placeholder="Please enter the style of the art work.">
+    </div>
+    <div>
+        <label for="type">Type: </label>
+        <input id="type" [(ngModel)]="artWork.type" placeholder="Please enter the type of the art work.">
+    </div>
+    <div>
+        <label for="price">Price: </label>
+        <input id="price" [(ngModel)]="artWork.price" placeholder="Please enter the price of the art work.">
+    </div>
+    <div>
+       <button (click)="saveArtWork()">Save</button> 
+    </div>
+    <div>{{artWork.subject}}</div>
+</div>

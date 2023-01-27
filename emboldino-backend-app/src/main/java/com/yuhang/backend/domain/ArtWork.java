@@ -4,17 +4,19 @@ public class ArtWork {
 	private long id;
 	private String subject;
 	private String description;
+	private String url;
 	private String style;
 	private String type;
 	private double price;
 	
 	public ArtWork() {}
 
-	public ArtWork(long id, String subject, String description, String style, String type, double price) {
+	public ArtWork(long id, String subject, String description, String url, String style, String type, double price) {
 		super();
 		this.id = id;
 		this.subject = subject;
 		this.description = description;
+		this.url = url;
 		this.style = style;
 		this.type = type;
 		this.price = price;
@@ -24,7 +26,7 @@ public class ArtWork {
 		return id;
 	}
 
-	protected void setId(long id) {
+	public void setId(long id) {
 		this.id = id;
 	}
 
@@ -68,10 +70,20 @@ public class ArtWork {
 		this.price = price;
 	}
 
+	public String getUrl() {
+		return url;
+	}
+
+	public void setUrl(String url) {
+		this.url = url;
+	}
+
 	@Override
 	public String toString() {
-		return "ArtWork [id=" + id + ", subject=" + subject + ", description=" + description + ", style=" + style
-				+ ", type=" + type + ", price=" + price + "]";
+		return "ArtWork [id=" + id + ", subject=" + subject + ", description=" + description + ", url=" + url
+				+ ", style=" + style + ", type=" + type + ", price=" + price + "]";
 	}
+
+	
 
 }

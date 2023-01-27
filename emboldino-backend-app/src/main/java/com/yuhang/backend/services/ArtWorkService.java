@@ -8,4 +8,6 @@ public interface ArtWorkService {
 	
 	public List<ArtWork> getAllArtWorks();
 
+	public long saveNewArtWork(ArtWork artWork);
+
 }

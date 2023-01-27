@@ -25,4 +25,14 @@ public class ArtWorkServiceImpl implements ArtWorkService {
 		return appDao.retrieveAllArtWorks();
 	}
 
+	@Override
+	public long saveNewArtWork(ArtWork artWork) {
+		if (artWork.getId() == 0) {
+			return this.appDao.createArtWork(artWork);
+		} else {
+			// TODO: update an existing art work.
+			return -1;
+		}
+	}
+
 }

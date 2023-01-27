@@ -1,0 +1,26 @@
+<h2>Please select on art work from the following</h2>
+<ul class="arkworks">
+  <li *ngFor="let art of artWorks">
+    <a (click)="showPaint(art.id)">
+    <span class="badge">{{art.id}}</span>{{art.subject}} - {{art.price}}
+    </a>
+    <button (click)="deleteArtWork(art.id)">Delete</button>
+  </li>
+  <button (click)="showEmbarkPage()">Embark</button>
+</ul>
+
+<div *ngIf="showEmbark">
+  <app-embark></app-embark>
+</div>
+
+<div *ngIf="currentArtWork">
+    <div>Subject: {{currentArtWork.subject}}</div>
+    <div>Description: {{currentArtWork.description}}</div>
+    <div>Type: {{currentArtWork.type}}</div>
+    <div>Style: {{currentArtWork.style}}</div>
+    <div>Price: ${{currentArtWork.price}}</div>
+    <div class="paint">
+        <img src="{{currentArtWork.url}}">
+    </div>
+</div>
+

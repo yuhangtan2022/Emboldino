@@ -7,4 +7,6 @@ import com.yuhang.backend.domain.ArtWork;
 public interface AppDao {
 
 	public List<ArtWork> retrieveAllArtWorks();
+
+	public long createArtWork(ArtWork artWork);
 }
